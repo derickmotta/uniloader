@@ -13,7 +13,7 @@ class DashboardController extends Controller
 
         // Storage::disk('public')->put('storage/images/logo_loading.webp', $logoLoading);
 
-        return view("home");
+        return view("posts.home");
 
         // $idea = new Idea([
         //     'content' => 'test1',
