@@ -1,25 +1,36 @@
-</body>
-</html>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{{ config('app.name') }} | Register</title>
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset("css/sign_in.css") }}">
+    <title>{{ config('app.name') }}</title>
+    <link class="favicon" rel="icon" href="{{ asset("images/icon/favicon-white.png") }}" type="image/x-icon" media="(prefers-color-scheme: dark)">
+    <link class="favicon" rel="icon" href="{{ asset("images/icon/favicon-black.png") }}" type="image/x-icon" media="(prefers-color-scheme: light)">
 </head>
 <body>
 
-    <header>
-        @include('shared.header')
-    </header>
+<header>
 
-    <main>
-        <div class="content">
-            @include('shared.loginForm')
+        <div class="logo-header">
+            <a href="{{ route("home") }}"><img src="{{ asset("images/dowloader-logo-white.webp") }}" alt="logoheader" width="90px" height="auto"></a>
         </div>
-    </main>
+        @include("shared.header")
+</header>
+
+    <section>
+        <h2>Enter in your account</h2>
+        <input type="email" placeholder="E-mail" class="emaill">
+        <input type="password" placeholder="Password" class="passwordd">
+
+        <label class="checkbox-container">
+            <input type="checkbox">
+            <span class="checkmark">Remember me</span>
+        </label>
+
+
+        <button>Login</button>
+    </section>
 
 </body>
 </html>

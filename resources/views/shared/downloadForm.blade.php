@@ -1,10 +1,4 @@
-    <form action="/download" method="$_POST">
-        <h2>Paste the url where video is located. We do the rest for you...</h2>
-        <div class="inputForm">
-            <input type="text" name="url" id="url" placeholder="Ex: https://site.com/page/video">
-        </div>
-        <input type="submit" value="Crawl and Download">
-    </form>
-
-
-
+<form action="/download" method="$_POST" class="download_form">
+    <input type="text" name="url" placeholder="Ex: https://www.youtube.com/watch?v=pBy1zgt0XPc">
+    <button>Download</button>
+</form>

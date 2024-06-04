@@ -2,7 +2,7 @@
 {{-- Register form --}}
 
 <div>
-    <form action="{{ route('login') }}" method="post">
+    <form action="{{ route('login') }}" method="POST">
         @csrf
 
         <label for="email">Email</label>

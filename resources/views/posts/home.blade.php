@@ -23,7 +23,6 @@
             <img src="{{ asset('images/logo_loading.webp') }}" alt="Logo is loading..." class="logo">
             @include('shared.downloadForm')
         </div>
-    </main>
 
 @endauth
 
