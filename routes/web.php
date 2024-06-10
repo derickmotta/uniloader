@@ -6,6 +6,8 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 
+Route::get('/dashboard', [DashboardController::class, 'loged'])->name('loged');
+
 Route::get('/', [DashboardController::class, 'index'])->name('home');
 
 Route::get('/profile', [ProfileController::class, 'profile']);
@@ -22,8 +24,4 @@ Route::view('/login', 'auth.login')->name('login');
 
 Route::post('/login', [AuthController::class, 'login'])->name('login');
 
-
-// Route::post('/register', function()
-// {
-//     return view('auth.register');
-// })->name('register');
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout');

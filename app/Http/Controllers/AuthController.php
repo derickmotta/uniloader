@@ -14,7 +14,8 @@ class AuthController extends Controller
         return view('auth.register');
     }
 
-    //Regiter the user
+    // Regiter the user
+
     public function register(Request $request)
     {
         // Validation
@@ -32,10 +33,10 @@ class AuthController extends Controller
 
         // Redirect
 
-        return redirect()->route('home');
+        return redirect()->route('loged');
     }
 
-    
+
 
     // Login user
 
@@ -49,7 +50,7 @@ class AuthController extends Controller
 
         if(Auth::attempt($fields, $request->remember))
         {
-            return redirect()->route('home');
+            return redirect()->route('loged');
         }
         else
         {
@@ -58,5 +59,22 @@ class AuthController extends Controller
                 'failed' => 'The provided credentials do not match our records.'
             ]);
         }
+    }
+
+    // Logout User
+
+    public function logout(Request $request)
+    {
+        // logout user
+        Auth::logout();
+
+        // invalidate session
+        $request->session()->invalidate();
+
+        // regenerate session token
+        $request->session()->regenerateToken();
+
+        // redirect to homepage
+        return redirect('/');
     }
 }

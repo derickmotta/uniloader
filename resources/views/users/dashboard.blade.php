@@ -25,7 +25,9 @@
 
     <section>
 
-        <h2>You are not logged in!</h2>
+        <p>You are on a restrict member area!</p>
+        
+        <h2>Welcome back, {{ auth()->user()->name }} </h2>
 
         <img src="{{ asset("images/logo_loading.webp") }}" alt="logo-home" width="290px" height="auto">
         <p>Paste the url where video is located. We do the rest for you...</p>

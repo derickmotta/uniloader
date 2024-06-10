@@ -11,20 +11,13 @@ class DashboardController extends Controller
     function index()
     {
 
-        // Storage::disk('public')->put('storage/images/logo_loading.webp', $logoLoading);
-
         return view("posts.index");
 
-        // $idea = new Idea([
-        //     'content' => 'test1',
-        // ]);
+    }
 
-        // $idea->save();
-
-        // dump(Idea::all());
-
-        // return view("dashboard", [
-        //     'ideas' => Idea::all()
-        // ]);
+    function loged()
+    {
+        return view("users.dashboard");
     }
 }
+

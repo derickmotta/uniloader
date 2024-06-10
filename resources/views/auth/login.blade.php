@@ -17,20 +17,21 @@
         </div>
         @include("shared.header")
 </header>
-
+<form action="{{ route('login') }}" method="post">
+    @csrf
     <section>
-        <h2>Enter in your account</h2>
-        <input type="email" placeholder="E-mail" class="emaill">
-        <input type="password" placeholder="Password" class="passwordd">
 
-        <label class="checkbox-container">
-            <input type="checkbox">
-            <span class="checkmark">Remember me</span>
-        </label>
+            <h2>Enter in your account</h2>
+            <input type="email" name="email" placeholder="E-mail" class="emaill">
+            <input type="password" name="password" placeholder="Password" class="passwordd">
 
+            <label class="checkbox-container">
+                <input type="checkbox">
+                <span class="checkmark">Remember me</span>
+            </label>
 
-        <button>Login</button>
+            <button>Login</button>
     </section>
-
+</form>
 </body>
 </html>
